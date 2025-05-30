@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DoWM</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/tokyo-night-dark.min.css">-->
+  <link rel="stylesheet" href="hjs.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/bash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/yaml.min.js"></script>
+
+<script>hljs.highlightAll();</script>
+</head>
+<body class="bg-slate-950 text-[#cdd6f4] font-sans">
+
+    <nav class="bg-slate-900 shadow-md">
+        <div class="max-w-7xl h-16 px-4 sm:px-6 lg:px-8 mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold">
+                <a href="#" class="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500">doWM</a>
+            </div>
+
+            <div class="text-[#cdd6f4] font-semibold flex items-center">
+                <a href="#features" class="hover:text-[#c6a0f6] hover:m-9 m-3 transition-all duration-500 ease">Features</a>
+                <a href="#screenshots" class="hover:text-[#c6a0f6] hover:m-6 m-3 transition-all duration-500 ease">Screenshots</a>
+                <a href="#install" class="hover:text-[#c6a0f6] hover:m-6 m-3 transition-all duration-500 ease">Installation</a>
+                <a href="#configuration" class="hover:text-[#c6a0f6] hover:m-6 m-3 mr-0 transition-all duration-500 ease">Configuration</a>
+
+                <a href="https://github.com/BobdaProgrammer/doWM" class="flex items-center m-6" target="_blank">
+                    <svg viewBox="0 0 20 20" class="size-5 fill-black/40 hover:fill-gray-300 dark:fill-gray-400 transition duration-300 ease">
+                        <path d="M10 0C4.475 0 0 4.475 0 10a9.994 9.994 0 006.838 9.488c.5.087.687-.213.687-.476 0-.237-.013-1.024-.013-1.862-2.512.463-3.162-.612-3.362-1.175-.113-.287-.6-1.175-1.025-1.412-.35-.188-.85-.65-.013-.663.788-.013 1.35.725 1.538 1.025.9 1.512 2.337 1.087 2.912.825.088-.65.35-1.088.638-1.338-2.225-.25-4.55-1.112-4.55-4.937 0-1.088.387-1.987 1.025-2.688-.1-.25-.45-1.274.1-2.65 0 0 .837-.262 2.75 1.026a9.28 9.28 0 012.5-.338c.85 0 1.7.112 2.5.337 1.912-1.3 2.75-1.024 2.75-1.024.55 1.375.2 2.4.1 2.65.637.7 1.025 1.587 1.025 2.687 0 3.838-2.337 4.688-4.562 4.938.362.312.675.912.675 1.85 0 1.337-.013 2.412-.013 2.75 0 .262.188.574.688.474A10.016 10.016 0 0020 10c0-5.525-4.475-10-10-10z" />
+                    </svg>
+                </a>
+
+            </div>
+        </div>
+    </nav>
+
+    <section class="items-center">
+            <h1 class="text-[10rem] bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 font-bold bg-clip-text text-transparent mx-auto text-center w-max">
+                doWM
+            </h1>
+            <span class="mx-auto text-center w-max block text-2xl">A beautiful tiling and floating window manager built for X11</span>
+    </section>
+
+    <section id="features" class="bg-slate-950 py-16 px-6 text-[#cdd6f4]">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-4xl font-extrabold bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent mb-8">
+                Features
+            </h2>
+            <p class="text-lg text-slate-400 mb-12">
+            doWM brings you a minimal, fast, and highly customizable tiling and floating window experience.
+            </p>
+
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 justify-items-center">
+
+                <!-- Feature 1 -->
+                <div class="bg-slate-900 rounded-2xl p-6 ring-2 ring-white/0 hover:ring-cyan-500/50 shadow-lg hover:shadow-cyan-500/50 transition duration-300">
+                    <!-- Tiling Icon -->
+                    <div class="text-cyan-400 mb-2">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">  
+                            <defs>
+                            <linearGradient id="tiling-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#f472b6" />
+                            <stop offset="50%" stop-color="#c084fc" />
+                            <stop offset="100%" stop-color="#818cf8" />
+                            </linearGradient>
+                            </defs>
+                            <rect x="3" y="3" width="8" height="16" stroke="url(#tiling-gradient)" rx="1" />
+                            <rect x="13" y="3" width="8" height="7" stroke="url(#tiling-gradient)" rx="1"/>
+                            <rect x="13" y="12" width="8" height="7" stroke="url(#tiling-gradient)" rx="1"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl mb-2 text-semibold">Tiling</h3>
+                    <span class="text-slate-400 text-sm">doWM provides extensive and powerful tiling support which you are be in control of</span>
+                </div>
+
+                <div class="bg-slate-900 rounded-2xl p-6 ring-2 ring-white/0 hover:ring-cyan-500/50 shadow-lg hover:shadow-cyan-500/50 transition duration-300">
+                    <!-- Tiling Icon -->
+                    <div class="text-cyan-400 mb-2">
+                        <svg class="w-8 h-8 mx-auto" fill="none" stroke="currentColor" stroke-width="32" viewBox="0 0 512 512">  
+                            <defs>
+                            <linearGradient id="settings-gear-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#f472b6" />
+                            <stop offset="50%" stop-color="#c084fc" />
+                            <stop offset="100%" stop-color="#818cf8" />
+                            </linearGradient>
+                            </defs>   <path
+    d="M262.29,192.31a64,64,0,1,0,57.4,57.4A64.13,64.13,0,0,0,262.29,192.31ZM416.39,256a154.34,154.34,0,0,1-1.53,20.79l45.21,35.46A10.81,10.81,0,0,1,462.52,326l-42.77,74a10.81,10.81,0,0,1-13.14,4.59l-44.9-18.08a16.11,16.11,0,0,0-15.17,1.75A164.48,164.48,0,0,1,325,400.8a15.94,15.94,0,0,0-8.82,12.14l-6.73,47.89A11.08,11.08,0,0,1,298.77,470H213.23a11.11,11.11,0,0,1-10.69-8.87l-6.72-47.82a16.07,16.07,0,0,0-9-12.22,155.3,155.3,0,0,1-21.46-12.57,16,16,0,0,0-15.11-1.71l-44.89,18.07a10.81,10.81,0,0,1-13.14-4.58l-42.77-74a10.8,10.8,0,0,1,2.45-13.75l38.21-30a16.05,16.05,0,0,0,6-14.08c-.36-4.17-.58-8.33-.58-12.5s.21-8.27.58-12.35a16,16,0,0,0-6.07-13.94l-38.19-30A10.81,10.81,0,0,1,49.48,186l42.77-74a10.81,10.81,0,0,1,13.14-4.59l44.9,18.08a16.11,16.11,0,0,0,15.17-1.75A164.48,164.48,0,0,1,187,111.2a15.94,15.94,0,0,0,8.82-12.14l6.73-47.89A11.08,11.08,0,0,1,213.23,42h85.54a11.11,11.11,0,0,1,10.69,8.87l6.72,47.82a16.07,16.07,0,0,0,9,12.22,155.3,155.3,0,0,1,21.46,12.57,16,16,0,0,0,15.11,1.71l44.89-18.07a10.81,10.81,0,0,1,13.14,4.58l42.77,74a10.8,10.8,0,0,1-2.45,13.75l-38.21,30a16.05,16.05,0,0,0-6.05,14.08C416.17,247.67,416.39,251.83,416.39,256Z"
+    stroke="url(#settings-gear-gradient)"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl mb-2 text-semibold">Easy Configuration</h3>
+                    <span class="text-slate-400 text-sm">doWM is easy to configure with one yaml file that allows you to make keybinds, layouts and tweak general settings</span>
+                </div>
+
+                <div class="bg-slate-900 rounded-2xl p-6 ring-2 ring-white/0 hover:ring-cyan-500/50 shadow-lg hover:shadow-cyan-500/50 transition duration-300">
+                    <!-- Tiling Icon -->
+                    <div class="text-cyan-400 mb-2">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">  
+                            <defs>
+                            <linearGradient id="tiling-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#f472b6" />
+                            <stop offset="50%" stop-color="#c084fc" />
+                            <stop offset="100%" stop-color="#818cf8" />
+                            </linearGradient>
+                            </defs>
+                            <rect x="3" y="3" width="8" height="8" stroke="url(#tiling-gradient)" rx="1" />
+                            <rect x="7" y="13" width="8" height="8" stroke="url(#tiling-gradient)" rx="1"/>
+                            <rect x="14" y="4" width="8" height="7" stroke="url(#tiling-gradient)" rx="1"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl mb-2 text-semibold">Floating</h3>
+                    <span class="text-slate-400 text-sm">doWM is also perfect for people who prefer floating window managers as it supports floating too</span>
+                </div>
+
+                <div class="bg-slate-900 rounded-2xl p-6 ring-2 ring-white/0 hover:ring-cyan-500/50 shadow-lg hover:shadow-cyan-500/50 transition duration-300">
+                    <!-- Tiling Icon -->
+                    <div class="text-cyan-400 mb-2">
+                        <svg class="w-14 h-8 mx-auto" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 16 24">  
+                            <defs>
+                            <linearGradient id="tiling-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#f472b6" />
+                            <stop offset="50%" stop-color="#c084fc" />
+                            <stop offset="100%" stop-color="#818cf8" />
+                            </linearGradient>
+                            </defs>
+                            <rect x="-20" y="5" width="16" height="12" stroke="url(#tiling-gradient)" rx="1" />
+                            <rect x="0" y="5" width="16" height="12" stroke="url(#tiling-gradient)" rx="1"/>
+                            <rect x="20" y="5" width="16" height="12" stroke="url(#tiling-gradient)" rx="1"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl mb-2 text-semibold">Workspaces</h3>
+                    <span class="text-slate-400 text-sm">doWM provides 10 workspaces for you to use to fill all your needs, increasing your productivity massively</span>
+                </div>
+
+                <div class="bg-slate-900 rounded-2xl p-6 ring-2 ring-white/0 hover:ring-cyan-500/50 shadow-lg hover:shadow-cyan-500/50 transition duration-300">
+                    <!-- Tiling Icon -->
+                    <div class="text-cyan-400 mb-2">
+                        <svg class="w-8 h-8 mx-auto" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 600 600">  
+                            <defs>
+                            <linearGradient id="tiling-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#f472b6" />
+                            <stop offset="50%" stop-color="#c084fc" />
+                            <stop offset="100%" stop-color="#818cf8" />
+                            </linearGradient>
+                            </defs>
+                            <path xmlns="http://www.w3.org/2000/svg" d="M0 0 C1.45362052 2.6936889 2.36386564 5.09434511 2.94213867 8.09643555 C3.17870178 9.29762779 3.17870178 9.29762779 3.42004395 10.52308655 C3.58435913 11.38558517 3.74867432 12.2480838 3.91796875 13.13671875 C4.28497378 15.00089784 4.65242264 16.8649896 5.02026367 18.72900391 C5.21059174 19.70266907 5.4009198 20.67633423 5.59701538 21.67950439 C9.00328701 39.03143832 12.6957042 56.11465836 18 73 C18.24814453 73.8142041 18.49628906 74.6284082 18.75195312 75.46728516 C28.94273156 108.80471834 45.6979439 138.26628932 77.27734375 155.10546875 C109.24977385 171.56474961 145.34979142 179.42243114 180.59936523 185.50463867 C182.06031616 185.76337769 182.06031616 185.76337769 183.55078125 186.02734375 C184.39294189 186.16906006 185.23510254 186.31077637 186.1027832 186.45678711 C186.72886475 186.63604736 187.35494629 186.81530762 188 187 C188.33 187.66 188.66 188.32 189 189 C188.12827148 189.16491943 187.25654297 189.32983887 186.35839844 189.49975586 C134.75310212 198.63587471 134.75310212 198.63587471 86 217 C85.37706055 217.30631348 84.75412109 217.61262695 84.11230469 217.92822266 C73.34048753 223.23355663 62.7049041 229.05238444 54.2734375 237.7890625 C53 239 53 239 51 239 C50.73445312 239.58910156 50.46890625 240.17820313 50.1953125 240.78515625 C48.96863174 243.05812354 47.6558766 244.57793351 45.875 246.4375 C33.31248856 260.56057186 25.710747 279.21094443 20 297 C19.76603516 297.70946777 19.53207031 298.41893555 19.29101562 299.14990234 C11.00150821 324.43289997 5.70089337 350.84782411 1 377 C0.34 376.67 -0.32 376.34 -1 376 C-1.65704463 373.40680749 -2.18962495 370.87036291 -2.6640625 368.2421875 C-2.98022379 366.58255423 -3.29664117 364.92296972 -3.61328125 363.26342773 C-3.77779785 362.384841 -3.94231445 361.50625427 -4.11181641 360.6010437 C-11.46027298 321.56586411 -19.56786023 278.72680559 -45 247 C-45.63164062 246.18660156 -46.26328125 245.37320313 -46.9140625 244.53515625 C-79.08736408 205.58492519 -141.74026861 197.84833788 -188 189 C-188 188.34 -188 187.68 -188 187 C-186.95062256 186.79955078 -185.90124512 186.59910156 -184.82006836 186.39257812 C-117.89547677 174.74876593 -117.89547677 174.74876593 -59 143 C-58.01902344 142.19949219 -57.03804687 141.39898437 -56.02734375 140.57421875 C-45.14214984 131.18630048 -37.61897181 119.62021892 -31 107 C-30.41476563 105.88496094 -29.82953125 104.76992187 -29.2265625 103.62109375 C-15.37378624 75.57078888 -9.61464541 43.99284045 -3.57617188 13.53295898 C-3.41156464 12.70813019 -3.2469574 11.88330139 -3.07736206 11.03347778 C-2.76619957 9.47115907 -2.45838186 7.9081695 -2.15432739 6.3444519 C-1.11156002 1.11156002 -1.11156002 1.11156002 0 0 Z " fill="url(#tiling-gradient)" transform="translate(188,4)"/>
+                            <path xmlns="http://www.w3.org/2000/svg" d="M0 0 C2.10186884 3.60353099 2.84940079 7.38132375 3.6640625 11.421875 C3.97974491 12.92652007 4.29626646 14.43098928 4.61352539 15.93530273 C4.77805206 16.72154022 4.94257874 17.50777771 5.11209106 18.31784058 C13.97008124 60.98401162 13.97008124 60.98401162 41.0625 93.75 C61.99340584 107.21773733 85.7043739 112.45873804 109.87011719 117.04736328 C111.04735352 117.27536621 112.22458984 117.50336914 113.4375 117.73828125 C114.48808594 117.93462158 115.53867187 118.13096191 116.62109375 118.33325195 C117.40613281 118.55327881 118.19117188 118.77330566 119 119 C119.33 119.66 119.66 120.32 120 121 C119.04448242 121.21092285 118.08896484 121.4218457 117.10449219 121.63916016 C64.66797417 131.45803352 64.66797417 131.45803352 24.8828125 164.18359375 C10.93890331 186.78661512 6.46737162 214.44457918 1 240 C0.34 239.67 -0.32 239.34 -1 239 C-1.59792284 236.83073894 -2.08137683 234.62973229 -2.515625 232.421875 C-2.79657598 231.02943213 -3.07766902 229.63701793 -3.35888672 228.24462891 C-3.50388611 227.51093079 -3.6488855 226.77723267 -3.79827881 226.02130127 C-12.44835447 181.43246363 -12.44835447 181.43246363 -40.14453125 146.828125 C-59.48644112 134.44506916 -81.51661079 129.33508709 -103.734375 124.69726562 C-109.17258813 123.53611605 -114.58616336 122.2692833 -120 121 C-117.28018406 118.28018406 -115.05624532 118.22464471 -111.2890625 117.484375 C-109.8943956 117.20339423 -108.49978518 116.92213304 -107.10522461 116.640625 C-106.37351044 116.49560547 -105.64179626 116.35058594 -104.88790894 116.20117188 C-67.52258727 109.34503786 -67.52258727 109.34503786 -35.828125 89.79296875 C-34 88 -34 88 -32 88 C-31.73445313 87.41605469 -31.46890625 86.83210938 -31.1953125 86.23046875 C-29.96658391 83.93764514 -28.58164114 82.26918391 -26.875 80.3125 C-13.27092273 62.97507928 -8.85455188 39.40382026 -4.39453125 18.41015625 C-3.0778429 12.23446316 -1.57366551 6.11475548 0 0 Z " fill="url(#tiling-gradient)" transform="translate(392,268)"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl mb-2 text-semibold">Compositor support</h3>
+                    <span class="text-slate-400 text-sm">doWM works seemlessly with compositors like picom to make your WM experience look even nicer</span>
+                </div>
+
+                <div class="bg-slate-900 rounded-2xl p-6 ring-2 ring-white/0 hover:ring-cyan-500/50 shadow-lg hover:shadow-cyan-500/50 transition duration-300">
+                    <!-- Tiling Icon -->
+                    <div class="text-cyan-400 mb-2">
+                        <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" stroke-width="2">  
+                            <defs>
+                            <linearGradient id="tiling-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#f472b6" />
+                            <stop offset="50%" stop-color="#c084fc" />
+                            <stop offset="100%" stop-color="#818cf8" />
+                            </linearGradient>
+                            </defs>
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M3 10h4l3 8 4-16 3 8h4" stroke="url(#tiling-gradient)"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl mb-2 text-semibold">Minimalism and performance</h3>
+                    <span class="text-slate-400 text-sm">doWM is extremely lightweight and performant WM, so don't worry about your old computer exploding!</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="screenshots" class="bg-slate-950 py-16 px-6 text-[#cdd6f4]">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-4xl font-extrabold bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent mb-8">
+                Screenshots
+            </h2>
+            <p class="text-lg text-slate-400 mb-12">
+            Take a look at what is possible with doWM!
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 justify-items-center">
+                <img src="images/cava.png" class="rounded-md ring-1 ring-white/0 hover:ring-cyan-500/50 shadow-lg hover:shadow-cyan-500/50 transition duration-300">
+                <img src="images/floating.png" class="rounded-md ring-1 ring-white/0 hover:ring-cyan-500/50 shadow-lg hover:shadow-cyan-500/50 transition duration-300">
+                <img src="images/spotify.png" class="rounded-md ring-1 ring-white/0 hover:ring-cyan-500/50 shadow-lg hover:shadow-cyan-500/50 transition duration-300">
+                <img src="images/toriiwal.png" class="rounded-md ring-1 ring-white/0 hover:ring-cyan-500/50 shadow-lg hover:shadow-cyan-500/50 transition duration-300">
+                <img src="images/uniquelayout.png" class="rounded-md ring-1 ring-white/0 hover:ring-cyan-500/50 shadow-lg hover:shadow-cyan-500/50 transition duration-300">
+                <img src="images/workspaceviewer.png" class="rounded-md ring-1 ring-white/0 hover:ring-cyan-500/50 shadow-lg hover:shadow-cyan-500/50 transition duration-300">
+                <img src="images/firefoxstartpage.png" class="rounded-md ring-1 ring-white/0 hover:ring-cyan-500/50 shadow-lg hover:shadow-cyan-500/50 transition duration-300">
+                <img src="images/powermenu.png" class="rounded-md ring-1 ring-white/0 hover:ring-cyan-500/50 shadow-lg hover:shadow-cyan-500/50 transition duration-300">
+                <img src="images/shellscripts.png" class="rounded-md ring-1 ring-white/0 hover:ring-cyan-500/50 shadow-lg hover:shadow-cyan-500/50 transition duration-300">
+            </div>
+        </div>
+    </section>    
+
+    <section id="install" class="bg-slate-950 py-16 px-6 text-[#cdd6f4]">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-extrabold bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent mb-8 text-center">
+                Installation
+            </h2>
+            <p class="text-lg text-slate-200 mb-4">
+            Currently, the best way to install doWM is to clone and build from source:
+            </p>
+            <pre><code class="language-bash bg-[#111120]">
+git clone https://github.com/BobdaProgrammer/doWM
+cd doWM
+go build -o ./doWM
+make install
+            </code></pre>
+            <p class="text-lg text-slate-200 mb-4 mt-4">
+            At this point, you have no config and so if you logged in to doWM like this, you would be met with a blank screen and no way to log out. This is because doWM is a WM that lets you take control of everything, similar to hyprland. So to start, copy the example config into your <span class="bg-slate-900 rounded-md px-1">~/.config/doWM/</span>:
+            </p>
+            <pre><code class="language-bash bg-[#111120]">
+mkdir ~/.config/doWM
+cp -r ./exampleConfig/* ~/.config/doWM/ 
+            </code></pre>
+            <p class="text-lg text-slate-200 mb-4 mt-4">
+            Then we must make the <span class="bg-slate-900 rounded-md px-1">autostart.sh</span> <span class="font-bold">executable</span>:
+            </p>
+            <pre><code class="language-bash bg-[#111120]">
+chmod +x ~/.config/doWM/autostart.sh
+            </code></pre>
+            <p class="text-lg text-slate-200 mb-4 mt-4">
+            <span class="font-bold">However</span>, before you go and try to log straight into doWM, check and change the config so that it will work, you probably won't have the same exact keybinds and apps and you would want your own autostart, so although you could just have a glance through, atleast make sure you have a way of leaving doWM, so you would need access to a terminal of some sort. Currently the best way to log out is:
+            </p>
+            <pre><code class="language-bash bg-[#111120]">
+killall -u $USER
+            </code></pre>
+            <p class="text-lg text-slate-200 mb-4 mt-4">
+            As I said, I recommend you do some configuring which is exactly what I talk about in the next section just below here.
+            </p>
+        </div>
+    </section>
+
+    <section id="configuration" class="bg-slate-950 py-16 px-6 text-[#cdd6f4]">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-extrabold bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent mb-8 text-center py-1">
+                Configuration
+            </h2>
+            <p class="text-lg text-slate-200 mb-4">
+            doWM is simple to customize so you can get straight into enjoying the amazing WM. the doWM config is split into two files <span class="bg-slate-900 rounded-md px-1">autostart.sh</span> and <span class="bg-slate-900 rounded-md px-1">doWM.yml</span>. the autostart script is just a simple bash script that is run on initialization of the WM, so things like setting the wallpaper, opening a bar, running a notification daemon, etc. But <span class="bg-slate-900 rounded-md px-1">doWM.yml</span> is the most important file, it is where you will customize doWM to your liking. So lets run through all the different things you can set. There is also an example yml file in the github repo <a target="_blank" href="https://github.com/BobdaProgrammer/doWM/blob/main/exampleConfig/doWM.yml" class="text-cyan-500">here</a>. One thing to note is that tiling space is just the area the WM has made for your tiling windows to fit into (this space avoids the bar, if one is present). If you read through the code below, it will show you the general settings you can set, with comments to tell you what each thing does, after we will delve into layouts and keybinds:
+            </p>
+            <pre><code class="language-yaml bg-[#111120]">
+# gap from edge of tiling space to windows
+#  ________________ 
+# |    ________    |
+# |   |        |   |
+# |   |  win   |   |
+# |   |________|   |
+# |________________|
+outer-gap: 0
+
+# gaps between tiling windows
+gaps: 10
+
+# the mod key used for all window manager actions
+# Mod1 = alt
+# Mod4 = windows/super key
+# those are the usual although all 1-5 are supported
+mod-key: "Mod4"
+
+# if set to true, tiling will be enabled at startup instead of having to toggle tiling on every time
+default-tiling: true
+
+# the thickness/width of the border/frame around the windows
+border-width: 2
+
+# border color for unfocused windows
+unactive-border-color: 0xf5a97f
+
+# border color for focused windows
+active-border-color: 0xed8796
+            </code></pre>            
+            <p class="text-lg text-slate-200 mb-4 mt-4">
+            The next thing you can do in the config is define your tiling layouts. However, if you don't want to, you can leave as is from the example config or you can even delete that section entirely, as doWM generates some default layouts anyway. doWM works on a static layout system, meaning you define where you want windows to go in different layouts. The system works quite simply, in the <span class="bg-slate-900 rounded-md px-1">layouts:</span> you would have a list of each of the window counts (a window count is the number of windows in the layout you are about to specify) you want to have layouts for. For example, you could make layouts from 1 window to 5 windows, so you would have layouts for up to 5 windows in a workspace, any more than that and the window would just be placed above the windows to be moved to a seperate workspace or closed. For each layout window number, you specify <span class="bg-slate-900 rounded-md px-1">- windows:</span> for each layout inside of windows you would have a list of windows, each represented like this: 
+            </p>
+            <pre><code class="language-yaml bg-[#111120]">
+- x: 0.0 # the X percentage in the tiling space, 0.5 would have the top left corner halfway through the width of the tiling space
+  y: 0.0 # the Y percentage in the tiling space
+  width: 1.0 # The width percentage in the tiling space, 1.0 is the whole width
+  height: 1.0 # The height percentage in the tiling space
+            </code></pre>            
+            <p class="text-lg text-slate-200 mb-4 mt-4">
+            In the example above, it would have one window that takes up the whole space since its top left corner is at 0% on the X and 0% on the Y and its width and height are the full tiling space (100% width and 100% height). Don't worry if you don't understand this, as it should hopefully become clear by looking at the example below of a simple layout config for 1 and 2 windows:
+            </p>
+            <pre><code class="language-yaml bg-[#111120]">
+layouts:
+  - 1:
+    - windows: # list with 1 window - takes up whole space
+      - x: 0.0
+        y: 0.0
+        width: 1.0
+        height: 1.0
+
+
+  - 2:
+    - windows: # list of 2 windows - this is the 1st layout for 2 windows and it is two windows being split halfway
+      - x: 0.0
+        y: 0.0
+        width: 0.5
+        height: 1.0
+      - x: 0.5
+        y: 0.0
+        width: 0.5
+        height: 1.0
+    - windows: # another list of 2 windows - this layout is for one being 2/3 of the width, the other 1/3
+      - x: 0.0
+        y: 0.0
+        width: 0.66666666
+        height: 1.0
+      - x: 0.6666666666666
+        y: 0.0
+        width: 0.33333333333333
+        height: 1
+            </code></pre>       
+            <p class="text-lg text-slate-200 mb-4 mt-4">
+            In the <a target="_blank" href="https://github.com/BobdaProgrammer/doWM/blob/main/exampleConfig/doWM.yml" class="text-cyan-500">example file</a> I mentioned earlier, you can find a config for layouts up to 10 windows.
+            <br><br>
+            The final part of your config is probably the part you will use and change the most, because these are your keybinds, as before, there are example keybinds in the file, but I will explain them to you now. By default, doWM has keybinds to switch workspace and move windows between workspaces, this is your modkey + (0 - 9) to move workspaces and modkey + shift + (0 - 9) to move a window to the workspace your switching to. Each keybind has 3 parameters, the first one is <span class="bg-slate-900 rounded-md px-1">key:</span> this is the letter or name of the key for that keybind, such as: "f1", "w", "c", "right", "left". Next is a boolean, this is <span class="bg-slate-900 rounded-md px-1">shift:</span> and it is if shift should be pressed for it to register that keybind. Finally, you have a string, it will either be an <span class="bg-slate-900 rounded-md px-1">exec:</span> or a <span class="bg-slate-900 rounded-md px-1">role:</span>. An exec is just a string of a command you want to run, note, if you want to run multiple commands, use <span class="bg-slate-900 rounded-md px-1">sh -c 'COMMAND_1 && COMMAND_2'</span>, otherwise, you can just put the command to run. A role is an action that should be conducted by the WM. Here are the rules you can use:
+            </p>
+            <ul class="list-disc pl-5">
+                <li><code>quit</code> – gracefully close window</li>
+                <li><code>force-quit</code> – force close window</li>
+                <li><code>toggle-tiling</code> – toggle tiling mode</li>
+                <li><code>toggle-fullscreen</code> – toggle fullscreen on a window</li>
+                <li><code>swap-window-left</code> – swap a window with the previous window in a tiling layout</li>
+                <li><code>swap-window-right</code> – swap a window with the next window in a tiling layout</li>
+                <li><code>focus-window-left</code> – focus the previous window in a tiling layout</li>
+                <li><code>focus-window-right</code> – focus the next window in a tiling layout</li>
+                <li><code>reload-config</code> – reload the config (not <code>autostart.sh</code>)</li>
+                <li><code>increase-gap</code> – increase the gap between tiling windows (not permanent)</li>
+                <li><code>decrease-gap</code> – decrease the gap between tiling windows (not permanent)</li>
+                <li><code>detach-tiling</code> – toggle detachment of tiling for the current workspace (can be floating while others tile)</li>
+                <li><code>next-layout</code> – switch to the next layout for the current window count</li>
+            </ul>
+            <p class="text-lg text-slate-200 mb-4 mt-4">
+            Again, loads of keybinds are in the example file for you to look at, but here is a short example:
+            </p>
+            <pre><code class="language-yaml bg-[#111120]">
+keybinds:
+    # When mod + t is pressed then open kitty
+  - key: "t"
+    shift: false
+    exec: "kitty"
+  # When mod + shift + right arrow is pressed then switch the focused window to the right
+  - key: "right"
+    shift: true
+    role: "swap-window-right"
+            </code></pre>   
+
+            <p class="text-lg text-slate-200 mb-4 mt-4">
+            And there you go, that was a tour through the configuration of doWM, now I encourage you to go and try out doWM and configure it yourself, just have fun, make it something which you enjoy to use!
+            </p>
+
+        </div>
+    </section>
+</body>
+</html>
