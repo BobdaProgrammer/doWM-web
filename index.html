@@ -236,7 +236,7 @@ chmod +x ~/.config/doWM/autostart.sh
             <span class="font-bold">However</span>, before you go and try to log straight into doWM, check and change the config so that it will work, you probably won't have the same exact keybinds and apps and you would want your own autostart, so although you could just have a glance through, atleast make sure you have a way of leaving doWM, so you would need access to a terminal of some sort. Currently the best way to log out is:
             </p>
             <pre><code class="language-bash bg-[#111120]">
-killall -u $USER
+kill $(pgrep -o doWM)
             </code></pre>
             <p class="text-lg text-slate-200 mb-4 mt-4">
             As I said, I recommend you do some configuring which is exactly what I talk about in the next section just below here.
