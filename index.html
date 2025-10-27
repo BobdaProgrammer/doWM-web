@@ -217,10 +217,9 @@
 git clone https://github.com/BobdaProgrammer/doWM
 cd doWM
 go build -o ./doWM
-make install
+make install config
             </code></pre>
-            <p class="text-lg text-slate-200 mb-4 mt-4">
-            At this point, you have no config and so if you logged in to doWM like this, you would be met with a blank screen and no way to log out. This is because doWM is a WM that lets you take control of everything, similar to hyprland. So to start, copy the example config into your <span class="bg-slate-900 rounded-md px-1">~/.config/doWM/</span>:
+            <p class="text-lg text-slate-200 mb-4 mt-4"><span class="bg-slate-900 rounded-md px-1">make install config</span> will install doWM and move an an example config into the config folder. you can just run <span class="bg-slate-900 rounded-md px-1">make install</span> and write your own from scratch but the example config is a good place to start. If you did just use <span class="bg-slate-900 rounded-md px-1">make install</span>, you can run the following three commands to copy the example config into <span class="bg-slate-900 rounded-md px-1">~/.config/doWM/</span>:
             </p>
             <pre><code class="language-bash bg-[#111120]">
 mkdir ~/.config/doWM
@@ -236,7 +235,7 @@ chmod +x ~/.config/doWM/autostart.sh
             <span class="font-bold">However</span>, before you go and try to log straight into doWM, check and change the config so that it will work, you probably won't have the same exact keybinds and apps and you would want your own autostart, so although you could just have a glance through, atleast make sure you have a way of leaving doWM, so you would need access to a terminal of some sort. Currently the best way to log out is:
             </p>
             <pre><code class="language-bash bg-[#111120]">
-killall -u $USER
+kill $(pgrep -o doWM)
             </code></pre>
             <p class="text-lg text-slate-200 mb-4 mt-4">
             As I said, I recommend you do some configuring which is exactly what I talk about in the next section just below here.
@@ -265,6 +264,13 @@ outer-gap: 0
 # gaps between tiling windows
 gaps: 10
 
+# the amount the window will be resized with the keybinds
+resize-amount: 5
+
+# wether the WM should auto reload the config when changes are made
+# if there is an error in the config, it will keep the old config and not auto update
+auto-reload: true
+
 # the mod key used for all window manager actions
 # Mod1 = alt
 # Mod4 = windows/super key
@@ -282,7 +288,21 @@ unactive-border-color: 0xf5a97f
 
 # border color for focused windows
 active-border-color: 0xed8796
-            </code></pre>            
+            </code></pre>     
+            <p class="text-lg text-slate-200 mb-4 mt-4">The multi monitor system is fairly simple, you don't need to add it to your config but you can if you want to specify positions for your monitors. The only rule for the positions is they cannot be negative, this means that the monitor that is the highest has a Y of 0, where as ones lower than that could be something like 1080, same with X, the one on the furthest left would be 0, then to the right of that could be 1920. Here is an example of two monitors, one it above and to the right and the other below and to the left:
+            </p>       
+            <pre><code class="language-yaml bg-[#111120]">
+monitors:
+  # highest and to the right
+  - x: 960
+    y: 0
+
+  # furthest to the left and below
+  - x: 0
+    y: 1080
+            </code></pre>
+            <p class="text-lg text-slate-200 mb-4 mt-4">
+            You can move a window between monitors by simply holding the mod key and dragging to the next monitor.</p>
             <p class="text-lg text-slate-200 mb-4 mt-4">
             The next thing you can do in the config is define your tiling layouts. However, if you don't want to, you can leave as is from the example config or you can even delete that section entirely, as doWM generates some default layouts anyway. doWM works on a static layout system, meaning you define where you want windows to go in different layouts. The system works quite simply, in the <span class="bg-slate-900 rounded-md px-1">layouts:</span> you would have a list of each of the window counts (a window count is the number of windows in the layout you are about to specify) you want to have layouts for. For example, you could make layouts from 1 window to 5 windows, so you would have layouts for up to 5 windows in a workspace, any more than that and the window would just be placed above the windows to be moved to a seperate workspace or closed. For each layout window number, you specify <span class="bg-slate-900 rounded-md px-1">- windows:</span> for each layout inside of windows you would have a list of windows, each represented like this: 
             </p>
@@ -344,6 +364,14 @@ layouts:
                 <li><code>decrease-gap</code> – decrease the gap between tiling windows (not permanent)</li>
                 <li><code>detach-tiling</code> – toggle detachment of tiling for the current workspace (can be floating while others tile)</li>
                 <li><code>next-layout</code> – switch to the next layout for the current window count</li>
+                <li><code>resize-x-scale-up</code> - increases the width of the current window</li>
+                <li><code>resize-x-scale-down</code> - decreases the width of the current window</li>
+                <li><code>resize-y-scale-up</code> - increases the height of the current window</li>
+                <li><code>resize-y-scale-down</code> - decreases height of current window</li>
+                <li><code>move-x-left</code> - moves window to the left</li>
+                <li><code>move-x-right</code> - moves window to the right</li>
+                <li><code>move-y-up</code> - moves window up</li>
+                <li><code>move-y-down</code> - moves window down</li>
             </ul>
             <p class="text-lg text-slate-200 mb-4 mt-4">
             Again, loads of keybinds are in the example file for you to look at, but here is a short example:
