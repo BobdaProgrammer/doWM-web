@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />    
   <meta name="darkreader-lock">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="DoWM, a beautiful tiling and floating window manager written in golang. Works amzing with x11 and linux. Fully open source on github. Has custom layouts, customization, configuration, keybinds, and EWMH support. High performance and lightweight">
   <title>DoWM</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/tokyo-night-dark.min.css">-->
@@ -17,7 +18,7 @@
 </head>
 <body class="bg-slate-950 text-[#cdd6f4] font-sans">
 
-    <nav class="bg-slate-900 shadow-md">
+    <nav class="bg-slate-900 shadow-md" role="navigation">
         <div class="max-w-7xl h-16 px-4 sm:px-6 lg:px-8 mx-auto flex justify-between items-center">
             <div class="text-2xl font-bold">
                 <a href="#" class="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500">doWM</a>
@@ -39,19 +40,19 @@
         </div>
     </nav>
 
-    <section class="items-center">
+    <section class="items-center" role="banner">
             <h1 class="sm:text-[10rem] text-[6rem] bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 font-bold bg-clip-text text-transparent mx-auto text-center w-max">
                 doWM
             </h1>
             <span class="mx-auto text-center block text-2xl">A beautiful tiling and floating window manager built for X11</span>
     </section>
 
-    <section id="features" class="bg-slate-950 py-16 px-6 text-[#cdd6f4]">
+    <section id="features" class="bg-slate-950 py-16 px-6 text-[#cdd6f4]" role="main">
         <div class="max-w-7xl mx-auto text-center">
             <h2 class="text-4xl font-extrabold bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent mb-8">
                 Features
             </h2>
-            <p class="text-lg text-slate-400 mb-12">
+            <p class="text-lg text-slate-300 mb-12">
             doWM brings you a minimal, fast, and highly customizable tiling and floating window experience.
             </p>
 
@@ -192,15 +193,15 @@
             Take a look at what is possible with doWM!
             </p>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 justify-items-center">
-                <img src="images/cava.avif" type="image/avif" class="rounded-md ring-1 ring-white/0 hover:ring-cyan-500/50 shadow-lg hover:shadow-cyan-500/50 transition duration-300">
-                <img src="images/floating.avif" type="image/avif" class="rounded-md ring-1 ring-white/0 hover:ring-cyan-500/50 shadow-lg hover:shadow-cyan-500/50 transition duration-300">
-                <img src="images/spotify.avif" type="image/avif" class="rounded-md ring-1 ring-white/0 hover:ring-cyan-500/50 shadow-lg hover:shadow-cyan-500/50 transition duration-300">
-                <img src="images/toriiwal.avif" type="image/avif" class="rounded-md ring-1 ring-white/0 hover:ring-cyan-500/50 shadow-lg hover:shadow-cyan-500/50 transition duration-300">
-                <img src="images/uniquelayout.avif" type="image/avif" class="rounded-md ring-1 ring-white/0 hover:ring-cyan-500/50 shadow-lg hover:shadow-cyan-500/50 transition duration-300">
-                <img src="images/workspaceviewer.avif" type="image/avif" class="rounded-md ring-1 ring-white/0 hover:ring-cyan-500/50 shadow-lg hover:shadow-cyan-500/50 transition duration-300">
-                <img src="images/firefoxstartpage.avif" type="image/avif" class="rounded-md ring-1 ring-white/0 hover:ring-cyan-500/50 shadow-lg hover:shadow-cyan-500/50 transition duration-300">
-                <img src="images/powermenu.avif" type="image/avif" class="rounded-md ring-1 ring-white/0 hover:ring-cyan-500/50 shadow-lg hover:shadow-cyan-500/50 transition duration-300">
-                <img src="images/shellscripts.avif" type="image/avif" class="rounded-md ring-1 ring-white/0 hover:ring-cyan-500/50 shadow-lg hover:shadow-cyan-500/50 transition duration-300">
+                <img src="images/cava.avif" type="image/avif" alt="cava music visualizer" class="rounded-md ring-1 ring-white/0 hover:ring-cyan-500/50 shadow-lg hover:shadow-cyan-500/50 transition duration-300">
+                <img src="images/floating.avif" type="image/avif" alt="floaing window demonstration" class="rounded-md ring-1 ring-white/0 hover:ring-cyan-500/50 shadow-lg hover:shadow-cyan-500/50 transition duration-300">
+                <img src="images/spotify.avif" type="image/avif" alt="themed spotify window" class="rounded-md ring-1 ring-white/0 hover:ring-cyan-500/50 shadow-lg hover:shadow-cyan-500/50 transition duration-300">
+                <img src="images/toriiwal.avif" type="image/avif" alt="relaxing wallpaper with terminal windows" class="rounded-md ring-1 ring-white/0 hover:ring-cyan-500/50 shadow-lg hover:shadow-cyan-500/50 transition duration-300">
+                <img src="images/uniquelayout.avif" type="image/avif" alt="demonstation of the window manager's capabilities to fit windows into unique layouts" class="rounded-md ring-1 ring-white/0 hover:ring-cyan-500/50 shadow-lg hover:shadow-cyan-500/50 transition duration-300">
+                <img src="images/workspaceviewer.avif" type="image/avif" alt="Shows custom workspace viewer widget built for the window manager" class="rounded-md ring-1 ring-white/0 hover:ring-cyan-500/50 shadow-lg hover:shadow-cyan-500/50 transition duration-300">
+                <img src="images/firefoxstartpage.avif" type="image/avif" alt="Shows a custom themed firefox starting page" class="rounded-md ring-1 ring-white/0 hover:ring-cyan-500/50 shadow-lg hover:shadow-cyan-500/50 transition duration-300">
+                <img src="images/powermenu.avif" alt="Demonstation of power menu written with eww" type="image/avif" class="rounded-md ring-1 ring-white/0 hover:ring-cyan-500/50 shadow-lg hover:shadow-cyan-500/50 transition duration-300">
+                <img src="images/shellscripts.avif" type="image/avif" alt="Different terminal windows showing pretty shell scripts" class="rounded-md ring-1 ring-white/0 hover:ring-cyan-500/50 shadow-lg hover:shadow-cyan-500/50 transition duration-300">
             </div>
         </div>
     </section>    
@@ -249,7 +250,7 @@ kill $(pgrep -o doWM)
                 Configuration
             </h2>
             <p class="text-lg text-slate-200 mb-4">
-            doWM is simple to customize so you can get straight into enjoying the amazing WM. the doWM config is split into two files <span class="bg-slate-900 rounded-md px-1">autostart.sh</span> and <span class="bg-slate-900 rounded-md px-1">doWM.yml</span>. the autostart script is just a simple bash script that is run on initialization of the WM, so things like setting the wallpaper, opening a bar, running a notification daemon, etc. But <span class="bg-slate-900 rounded-md px-1">doWM.yml</span> is the most important file, it is where you will customize doWM to your liking. So lets run through all the different things you can set. There is also an example yml file in the github repo <a target="_blank" href="https://github.com/BobdaProgrammer/doWM/blob/main/exampleConfig/doWM.yml" class="text-cyan-500">here</a>. One thing to note is that tiling space is just the area the WM has made for your tiling windows to fit into (this space avoids the bar, if one is present). If you read through the code below, it will show you the general settings you can set, with comments to tell you what each thing does, after we will delve into layouts and keybinds:
+            doWM is simple to customize so you can get straight into enjoying the amazing WM. the doWM config is split into two files <span class="bg-slate-900 rounded-md px-1">autostart.sh</span> and <span class="bg-slate-900 rounded-md px-1">doWM.yml</span>. the autostart script is just a simple bash script that is run on initialization of the WM, so things like setting the wallpaper, opening a bar, running a notification daemon, etc. But <span class="bg-slate-900 rounded-md px-1">doWM.yml</span> is the most important file, it is where you will customize doWM to your liking. So lets run through all the different things you can set. There is also an example yml file in the github repo <a target="_blank" href="https://github.com/BobdaProgrammer/doWM/blob/main/exampleConfig/doWM.yml" class="text-cyan-500 bg-zinc-800 px-1 rounded-md">here</a>. One thing to note is that tiling space is just the area the WM has made for your tiling windows to fit into (this space avoids the bar, if one is present). If you read through the code below, it will show you the general settings you can set, with comments to tell you what each thing does, after we will delve into layouts and keybinds:
             </p>
             <pre><code class="language-yaml bg-[#111120]">
 # gap from edge of tiling space to windows
@@ -346,7 +347,7 @@ layouts:
         height: 1
             </code></pre>       
             <p class="text-lg text-slate-200 mb-4 mt-4">
-            In the <a target="_blank" href="https://github.com/BobdaProgrammer/doWM/blob/main/exampleConfig/doWM.yml" class="text-cyan-500">example file</a> I mentioned earlier, you can find a config for layouts up to 10 windows.
+            In the <a target="_blank" href="https://github.com/BobdaProgrammer/doWM/blob/main/exampleConfig/doWM.yml" class="text-cyan-500 bg-zinc-800 px-1 rounded-md">example file</a> I mentioned earlier, you can find a config for layouts up to 10 windows.
             <br><br>
             The final part of your config is probably the part you will use and change the most, because these are your keybinds, as before, there are example keybinds in the file, but I will explain them to you now. By default, doWM has keybinds to switch workspace and move windows between workspaces, this is your modkey + (0 - 9) to move workspaces and modkey + shift + (0 - 9) to move a window to the workspace your switching to. Each keybind has 3 parameters, the first one is <span class="bg-slate-900 rounded-md px-1">key:</span> this is the letter or name of the key for that keybind, such as: "f1", "w", "c", "right", "left". Next is a boolean, this is <span class="bg-slate-900 rounded-md px-1">shift:</span> and it is if shift should be pressed for it to register that keybind. Finally, you have a string, it will either be an <span class="bg-slate-900 rounded-md px-1">exec:</span> or a <span class="bg-slate-900 rounded-md px-1">role:</span>. An exec is just a string of a command you want to run, note, if you want to run multiple commands, use <span class="bg-slate-900 rounded-md px-1">sh -c 'COMMAND_1 && COMMAND_2'</span>, otherwise, you can just put the command to run. A role is an action that should be conducted by the WM. Here are the rules you can use:
             </p>
